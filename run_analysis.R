@@ -57,4 +57,4 @@ tidyData <- melt(completeDataFiltered_byActivity, id.vars = c("Subject","Activit
 # Step 5: From the data set in step 4, creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
 tidyData_Mean <- dcast(tidyData, Subject + Activity ~ variable, mean)
-write.table(tidyData_Mean,"./Mean_TidyData_Subject.txt")
+write.table(tidyData_Mean,"./Output_meanTidyData.txt", row.names = FALSE)
